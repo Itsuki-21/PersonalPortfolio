@@ -413,3 +413,198 @@ section {
     color: #666; /* Slightly lighter color for the institution name */
     font-style: italic; /* Italic style for institution */
 }
+
+/* PROJECTS */
+#projects {
+    padding: 80px 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #111;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: #3a6eff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.project-card h2 {
+    color: #3a6eff;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.project-links a {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: white;
+    transition: 0.2s;
+}
+
+.project-links a:hover {
+    color: #3a6eff;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+.modal-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #3a6eff;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+
+.modal-links a:hover {
+    background: #5c85ff;
+}
+
+.project-card {
+    cursor: pointer;
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+.project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#carousel-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.carousel-btn:hover {
+    background: rgba(58,110,255,0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#modal-title,
+#modal-description,
+#modal-tech {
+    color: white;
+}
